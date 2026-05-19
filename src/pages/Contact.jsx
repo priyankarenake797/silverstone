@@ -58,7 +58,7 @@ const Contact = () => {
               <div className="icon">📍</div>
               <h3>ADDRESS:</h3>
               <p>
-                Mumbai
+                Mumbai- 400093
                 <br />
                 India
               </p>
