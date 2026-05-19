@@ -1,0 +1,152 @@
+/* HERO */
+
+.services-page-container {
+  position: relative;
+  width: 100%;
+  height: 65vh;
+  overflow: hidden;
+}
+
+.services-page-banner {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: blur(2px) grayscale(40%);
+  transform: scale(1.1);
+}
+
+.services-page-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+}
+
+.services-page-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+}
+
+.services-page-content h1 {
+  font-size: 4rem;
+  letter-spacing: 2px;
+}
+
+.services-page-content p {
+  font-size: 1.1rem;
+  color: #ddd;
+}
+
+/* SECTION */
+
+.services-page-section {
+  padding: 90px 8%;
+  background: #fff;
+  color: #111;
+}
+
+/* HEADING */
+
+.services-page-heading {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.services-page-heading span {
+  color: #777;
+  letter-spacing: 3px;
+  font-size: 0.9rem;
+}
+
+.services-page-heading h2 {
+  font-size: 2.8rem;
+  margin-top: 10px;
+  color: #111;
+}
+
+/* GRID */
+
+.services-page-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 25px;
+}
+
+/* BOX */
+
+.services-page-box {
+  background: #f7f7f7;
+  border: 1px solid #e5e5e5;
+  border-radius: 18px;
+  padding: 30px 20px;
+  text-align: center;
+  transition: 0.3s ease;
+}
+
+.services-page-box:hover {
+  transform: translateY(-6px);
+  background: #fff;
+  border-color: #999;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+/* ICON */
+
+.services-page-icon {
+  width: 70px;
+  height: 70px;
+  margin: auto;
+  margin-bottom: 18px;
+  border-radius: 50%;
+  background: #111;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  transition: 0.3s ease;
+}
+
+.services-page-box:hover .services-page-icon {
+  background: #444;
+  transform: scale(1.05);
+}
+
+/* TEXT */
+
+.services-page-box h3 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #222;
+  line-height: 1.5;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+  .services-page-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .services-page-heading h2 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-page-content h1 {
+    font-size: 2rem;
+  }
+
+  .services-page-content p {
+    font-size: 0.9rem;
+  }
+
+  .services-page-box {
+    padding: 25px 15px;
+  }
+}
