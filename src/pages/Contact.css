@@ -1,5 +1,3 @@
-/* trial  */
-/* GOOGLE FONT */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
 * {
@@ -13,7 +11,9 @@ body {
   background: #f5f5f5;
 }
 
-.contact-container {
+/* ================= HERO ================= */
+
+.contact-hero {
   position: relative;
   width: 100%;
   height: 50vh;
@@ -22,10 +22,16 @@ body {
 
 .contact-banner {
   width: 100%;
-  height: 500px;
+  height: 100%;
   object-fit: cover;
   filter: blur(8px);
   transform: scale(1.1);
+}
+
+.contact-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
 }
 
 .contact-content {
@@ -37,29 +43,34 @@ body {
   text-align: center;
 }
 
-/* MAIN SECTION */
-.contact {
+.contact-content h1 {
+  font-size: 40px;
+}
+
+/* ================= SECTION ================= */
+
+.contact-section {
   width: 100%;
-  padding: 80px 10%;
+  padding: 80px 8%;
 }
 
 /* HEADING */
+
 .contact-heading {
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 50px;
 }
 
 .contact-heading h1 {
   font-size: 48px;
   color: #4a5670;
-  letter-spacing: 2px;
 }
 
 .underline {
   width: 90px;
   height: 4px;
   background: black;
-  margin: 15px auto;
+  margin: 12px auto;
   border-radius: 10px;
 }
 
@@ -70,80 +81,86 @@ body {
   line-height: 1.7;
 }
 
-/* MAIN CONTAINER */
+/* ================= MAIN LAYOUT ================= */
+
 .contact-container {
   display: flex;
-  gap: 20px;
+  gap: 30px;
+  flex-wrap: wrap;
   align-items: stretch;
 }
 
-/* LEFT IMAGE */
+/* IMAGE */
+
 .contact-image {
-  flex: 1;
+  flex: 1 1 400px;
 }
 
 .contact-image img {
-  margin-top: 10%;
-  width: 90%;
-  height: 70%;
-  object-fit: cover;
-  border-radius: 6px;
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
 }
 
-/* RIGHT GRID */
+/* BOX GRID */
+
 .contact-boxes {
-  flex: 1;
+  flex: 1 1 400px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 }
 
-/* BOX STYLE */
+/* BOX */
+
 .box {
   background: linear-gradient(135deg, #0b1220, #16243b);
   color: white;
-  padding: 40px 25px;
-  border-radius: 6px;
-  transition: 0.4s ease;
-  min-height: 260px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  padding: 30px 20px;
+  border-radius: 10px;
+  transition: 0.3s;
 }
 
 .box:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
 }
 
-.box h2,
+.box h2 {
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
 .box h3 {
-  margin-bottom: 15px;
-  letter-spacing: 1px;
+  margin-bottom: 10px;
 }
 
 .box p {
   color: #ddd;
-  line-height: 1.8;
-  font-size: 15px;
+  font-size: 14px;
+  line-height: 1.6;
 }
+
+/* ICON */
 
 .icon {
-  font-size: 38px;
-  margin-bottom: 20px;
+  font-size: 30px;
+  margin-bottom: 15px;
 }
 
-/* SOCIAL ICONS */
+/* SOCIAL */
+
 .social-icons {
-  margin-top: 20px;
   display: flex;
-  gap: 15px;
+  gap: 12px;
+  margin-top: 15px;
+  flex-wrap: wrap;
 }
 
 .social-icons i {
-  width: 40px;
-  height: 40px;
+  width: 38px;
+  height: 38px;
   border: 1px solid rgba(255, 255, 255, 0.4);
   border-radius: 50%;
   display: flex;
@@ -155,43 +172,39 @@ body {
 
 .social-icons i:hover {
   background: white;
-  color: #111;
+  color: black;
 }
 
-/* RESPONSIVE */
+/* ================= RESPONSIVE ================= */
 
 @media (max-width: 900px) {
   .contact-container {
     flex-direction: column;
   }
 
-  .contact-image img {
-    width: 100%;
-    height: auto;
-    margin-top: 0;
-  }
-
   .contact-boxes {
-    grid-template-columns: 1fr; /* 👈 सर्व boxes एकाखाली एक */
-  }
-
-  .contact-heading h1 {
-    font-size: 38px;
+    grid-template-columns: 1fr 1fr;
   }
 }
 
-/* EXTRA SMALL DEVICES (phones) */
-@media (max-width: 500px) {
-  .contact {
+@media (max-width: 768px) {
+  .contact-section {
     padding: 50px 5%;
   }
 
-  .box {
-    padding: 25px 20px;
-    min-height: auto;
+  .contact-boxes {
+    grid-template-columns: 1fr;
   }
 
-  .icon {
-    font-size: 30px;
+  .contact-content h1 {
+    font-size: 28px;
+  }
+
+  .contact-heading h1 {
+    font-size: 34px;
+  }
+
+  .box {
+    padding: 25px 18px;
   }
 }

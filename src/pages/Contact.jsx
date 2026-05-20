@@ -1,14 +1,13 @@
 import React from "react";
 import bannerImg from "../assets/banner-silver.jpg";
 import logoImage from "../assets/silver-stone-logo.jpeg";
-import { FaLocationDot, FaPhone, FaEnvelope } from "react-icons/fa6";
-
 import "./Contact.css";
 
 const Contact = () => {
   return (
     <>
-      <div className="contact-container">
+      {/* HERO SECTION */}
+      <div className="contact-hero">
         <img src={bannerImg} alt="Banner" className="contact-banner" />
 
         <div className="contact-overlay"></div>
@@ -19,11 +18,10 @@ const Contact = () => {
             <p>Get in touch with us to bring your vision to life.</p>
           </marquee>
         </div>
-
-        {/* CONTACT SECTION START */}
       </div>
 
-      <section className="contact">
+      {/* CONTACT SECTION */}
+      <section className="contact-section">
         <div className="contact-heading">
           <h1>CONTACT US</h1>
           <div className="underline"></div>
@@ -42,7 +40,7 @@ const Contact = () => {
 
           {/* RIGHT BOXES */}
           <div className="contact-boxes">
-            <div className="box dark">
+            <div className="box">
               <h2>CONTACT US</h2>
               <p>Contact us for a quote. Help or to join the team.</p>
 
@@ -54,28 +52,22 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="box dark">
+            <div className="box">
               <div className="icon">📍</div>
-              <h3>ADDRESS:</h3>
-              <p>
-                Mumbai- 400093
-                <br />
-                India
-              </p>
+              <h3>ADDRESS</h3>
+              <p>Mumbai - 400093, India</p>
             </div>
 
-            <div className="box dark">
+            <div className="box">
               <div className="icon">✉️</div>
-              <h3>EMAIL:</h3>
+              <h3>EMAIL</h3>
               <p>silverstonefilms6@gmail.com</p>
-              <p>----------------------------</p>
             </div>
 
-            <div className="box dark">
+            <div className="box">
               <div className="icon">📞</div>
-              <h3>CALL US:</h3>
+              <h3>CALL US</h3>
               <p>8652168009</p>
-              <p>-----------</p>
             </div>
           </div>
         </div>
